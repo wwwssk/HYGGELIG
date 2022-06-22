@@ -27,6 +27,15 @@ var swiper = new Swiper(".mySwiper", {
 		clickable: true,
 	},
 });
+Fancybox.bind('[data-fancybox="gallery1"]', {
+	infinite: false,
+});
+Fancybox.bind('[data-fancybox="gallery2"]', {
+	infinite: false,
+});
+Fancybox.bind('[data-fancybox="gallery3"]', {
+	infinite: false,
+});
 /* ---------------------появление элементов при прокрутке--------------------------- */
 function onEntry(entry) {
 	entry.forEach(change => {
@@ -202,7 +211,7 @@ var constructive__swiper = new Swiper(".constructive__swiper", {
 });
 
 gsap.to(".constructive__img-bottom", {
-	yPercent: -15,
+	yPercent: -100,
 	ease: "none",
 	scrollTrigger: {
 		trigger: ".constructive__img-bottom-wrapper",

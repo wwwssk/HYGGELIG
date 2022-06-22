@@ -6,6 +6,11 @@
 		background-color: rgba($color: #D24318, $alpha: 1) !important;
 	}
 }
+.carousel__button[disabled] {
+	&:hover {
+		background-color: rgba($color: #D24318, $alpha: 0.5) !important;
+	}
+}
 
 .fancybox__button--zoom,
 .fancybox__button--slideshow,
