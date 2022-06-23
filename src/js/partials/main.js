@@ -20,15 +20,21 @@ $(document).ready(function() {
 /* pages */
 var swiper = new Swiper(".mySwiper", {
 	slidePerView: 1,
+
 	allowTouchMove: false,
 	autoHeight: true,
 	pagination: {
 		el: ".galary__btns",
 		clickable: true,
 	},
+	effect: 'fade',
+	speed: 700,
 });
 Fancybox.bind('[data-fancybox="gallery1"]', {
 	infinite: false,
+	Image: {
+		fit: "cover",
+	},
 });
 Fancybox.bind('[data-fancybox="gallery2"]', {
 	infinite: false,

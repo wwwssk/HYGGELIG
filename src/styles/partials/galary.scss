@@ -1,14 +1,66 @@
+.fancybox__slide {
+	padding: 0!important;
+}
+.carousel__button.is-next {
+	background-color: rgba($color: #D24318, $alpha: 0.25) !important;
+	width: 48px!important;
+	height: 48px!important;
+	right: 60px!important;
+	&::before{
+		content:'';
+		width: 12px;
+		height: 20px;
+		position: relative;
+		left: 2px;
+		background: url('../images/arrow-white-next.svg') 0 0 / 100% 100% no-repeat;
+	}
+	svg {
+		display: none;
+	}
+}
+.carousel__button.is-prev {
+	background-color: rgba($color: #D24318, $alpha: 0.25) !important;
+	width: 48px!important;
+	height: 48px!important;
+	left: 60px !important;
+	&::before{
+		content:'';
+		width: 12px;
+		height: 20px;
+		position: relative;
+		right: 2px;
+		background: url('../images/arrow-white-prev.svg') 0 0 / 100% 100% no-repeat;
+	}
+	svg {
+		display: none;
+	}
+}
+.fancybox__button--close {
+	position: absolute;
+	top: 50px!important;
+	right: 50px!important;
+	background-color: rgba($color: #ffffff, $alpha: 0.3)!important;
+	&::before {
+		content: '';
+		width: 16px;
+		height: 16px;
+		background: url('../images/+-icon-white.svg') 0 0 / 100% 100% no-repeat;
+		transform: rotate(45deg);
+	}
+	svg {
+		display: none;
+	}
+}
 .carousel__button {
-	background-color: rgba($color: #D24318, $alpha: 0.5) !important;
 	transition: all 0.3s ease 0s;
 
 	&:hover {
-		background-color: rgba($color: #D24318, $alpha: 1) !important;
+		background-color: rgba($color: #D24318, $alpha: 0.7) !important;
 	}
 }
 .carousel__button[disabled] {
 	&:hover {
-		background-color: rgba($color: #D24318, $alpha: 0.5) !important;
+		background-color: rgba($color: #D24318, $alpha: 0.25) !important;
 	}
 }
 
@@ -132,7 +184,7 @@
 	}
 
 	&__items {
-		height: 1268px;
+		height: 900px;
 		overflow-x: hidden;
 		overflow-y: scroll;
 		margin-top: 40px;
@@ -162,7 +214,7 @@
 		opacity: 0.5;
 
 		&:hover {
-			background: rgba($color: #D24318, $alpha: 1);
+			background: rgba($color: #D24318, $alpha: 0.7);
 		}
 	}
 
@@ -175,8 +227,8 @@
 	&__row {
 		display: flex;
 		flex-wrap: wrap;
-		margin: -15px;
-
+		margin: 0 -15px;
+		margin-top: -30px;
 		@media (max-width: 768px) {
 			margin: 0 -2.667vw 2.667vw;
 			padding-top: 1.600vw;
@@ -185,7 +237,8 @@
 
 	&__item {
 		width: 33.333%;
-		padding: 15px;
+		padding: 0 15px;
+		padding-top: 30px;
 
 		@media (max-width: 768px) {
 			width: 50%;
